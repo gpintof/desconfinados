@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(14, 12, 134);
+}
+#central{
+    margin: 0 auto;
+    text-align: center;
+}
+
+#casillero{
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    width: 450px;
+
+}
+
+#info{
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    width: 450px;
+}
+
+#nacional{
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    width: 450px;
+}
