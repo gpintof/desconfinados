@@ -6,20 +6,24 @@
         <link rel="stylesheet" type="text/css" href="css/estilos.css">
     </head>
     <body>
-
-    <div style="color:#FF0000" id="central">
-        
-        <h1>alguna imagen</h1>
+    <body background="https://statics-cuidateplus.marca.com/sites/default/files/styles/natural/public/sars-cov-2.jpg?itok=pkWpE08d">
+    <div style="color:#FF0000" id="central"> 
     </div>
 </br>
     <div id="casillero">
-        <h1>datos comuna</h1>
-        <input type="text" name="nombre">
+        <h1>Datos</h1>
+        <select name ="archivo">
+            <optgroup label = "V Region">
+                <option value="1">Comuna</option>
+
+            </optgroup>
+        </select>
+        
     </div>
     </br>
     <div id="info">
-        <h1>info</h1>
-        <h3>paginas relevantes</h3>
+        <h1>Informaciones</h1>
+        <h3>Paginas importantes</h3>
         </br>
         <?php echo '<a href="https://www.minsal.cl/">sitio web del Minsal</a>';?>
         </br>
@@ -30,10 +34,12 @@
     </div>
     </br>
     <div id="nacional">
-        <h1>estadistica nacional</h1>
+        <h1>Estadistica nacional</h1>
+        <br>
+        <?php echo '<a href="https://www.minsal.cl/">Minsal</a>';?>
+        </br>
     </div>
 
     </body>
 </html>
 
-<?php echo '<a href="https://www.minsal.cl/">Minsal</a>';?>
