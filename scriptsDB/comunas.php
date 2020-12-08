@@ -25,10 +25,12 @@ for ($i = 0; $i < count($datosv2); ++$i) {
 #truncar la tabla
 mysqli_query($conn, "TRUNCATE TABLE pasoapaso");
 #insertar en la base de datos
-for ($k = 0; $k < count($comunas); ++$k) {
+for ($k = 1; $k < count($comunas); ++$k) {
     $comunas = str_replace('"', '', $comunas);
     $pasos = str_replace('"', '', $pasos);
     $etapa = str_replace('"', '', $etapa);
+    #agregar backslash a posibles comillas simples en nombre de comunas
+    $comunas[$k] = addslashes($comunas[$k]);
     $sql = "INSERT INTO pasoapaso VALUES ('$comunas[$k]', '$pasos[$k]', '$etapa[$k]')";
     if (mysqli_query($conn, $sql)) {
         echo "New record created successfully";
