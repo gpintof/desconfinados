@@ -90,7 +90,7 @@
     </br>
     <!-- div para links -->
     <div id="info">
-        <h1>Links Relevantes</h1>
+        <h1>Links de interés</h1>
         <a href="https://www.gob.cl/coronavirus/plandeaccion/" target="_blank">Plan de Acción Minsal</a>
         </br>
         </br>
