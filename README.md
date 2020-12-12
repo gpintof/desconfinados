@@ -1,7 +1,7 @@
 # Desconfinados
 proyecto de IWG101
 
-~~Daniel Parra?~~
+~~Daniel Parra~~
 
 Gabriel Pinto
 
