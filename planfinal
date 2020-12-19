@@ -1,0 +1,19 @@
+Planificación Entrega Final 
+
+Para preparar la entrega final de nuestro proyecto vamos a cambiar la distribución de los divs en el HTML para poder presentar
+de mejor manera la información al usuario, como también modificar algunos elementos presentes en “Páginas de interés” para 
+agregar contenido que aun falta relacionado con los permisos necesarios para trasladarse dentro del país. Por otra parte, vamos
+a implementar un div en el cual se mostrará dos gráficos con información respecto a la situación de la comuna de la cual se ha 
+hecho la búsqueda en la pestaña “Datos”. Esto lo lograremos distribuyendo las tareas, quedan a cargo de las modificaciones en 
+el HTML Manuel Ponce y de la confección de los gráficos Gabriel Pinto.
+
+ Para esto será necesario desplazar “páginas de interés” hacia el costado izquierdo, agregar links como comisaria virtual y 
+ C19.cl para la obtención de pasaportes sanitarios y mostrar, de ser necesario, si requiere en esa comuna la obtención de algún 
+ documento para salir y bajo qué circunstancias se puede hacer. La columna en el costado derecho en la cual se desplegarán los 
+ gráficos una vez hecha la búsqueda deberá mostrar un grafico en que se aprecie en función del tiempo dos registros que muestre 
+ la cantidad de casos totales confirmados y el total de fallecidos respecto a la comuna y otro grafico en que se observe la 
+ cantidad de casos activos en un lapsus de tiempo que permita evaluar la evolución de la situación.
+ 
+Para obtener los datos que se utilizaran en los gráficos, recurriremos al mismo método implementado anteriormente para la 
+recopilación de información desde archivos CSV presentes en el Github del Ministerio de Ciencias. Posteriormente, para la 
+confección de los gráficos utilizaremos la librería Chart.js mediante la cual podremos generar el grafico que el usuario visualizara.
