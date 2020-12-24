@@ -1,5 +1,5 @@
 <?php
-#obtencion de información y actualización de base de datos sobre pruebas pcr y positividad a nivel nacional
+#obtencion de información y actualización de base de datos sobre casos confirmados por comuna
 $servername = "localhost";
 $database = "desconfinados";
 $username = "desconfinados";
@@ -12,17 +12,19 @@ if (!$conn) {
 }
 echo "Connected successfully";
 # Trunca tabla
-mysqli_query($conn, "TRUNCATE TABLE positividad");
+mysqli_query($conn, "TRUNCATE TABLE conftotales");
 # Llenado de la tabla
-$HANDLE = fopen("https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/master/output/producto49/Positividad_Diaria_Media.csv", "r");
-while(($data = fgetcsv($HANDLE, 10000,",")) !== FALSE) {
+$HANDLE = fopen("https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/master/output/producto2/2020-12-04-CasosConfirmados.csv", "r");
+while(($data = fgetcsv($HANDLE, 1000,",")) !== FALSE) {
     $last = end($data);
-    $sql = "INSERT INTO positividad VALUES ('$data[0]', '$last')";
+    $sql = "INSERT INTO conftotales VALUES ('$data[0]', '$data[1]', '$data[2]', '$data[3]', '$data[4]', '$last')";
     if (mysqli_query($conn, $sql)) {
         echo "New record created successfully";
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 }
+$sobrante = '"Comuna"';
+mysqli_query($conn,"DELETE FROM ConfTotales WHERE Comuna=$sobrante");
 mysqli_close($conn);
 ?>

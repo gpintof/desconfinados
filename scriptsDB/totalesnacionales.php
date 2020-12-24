@@ -3,7 +3,7 @@
 $servername = "localhost";
 $database = "desconfinados";
 $username = "desconfinados";
-$password = "";
+$password = "XqxsodQm9Y0iLJK0";
 # Crear conexión
 $conn = mysqli_connect($servername, $username, $password, $database);
 # Verificar conexión

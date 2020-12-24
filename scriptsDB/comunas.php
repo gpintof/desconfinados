@@ -2,7 +2,7 @@
 $servername = "localhost";
 $database = "desconfinados";
 $username = "desconfinados";
-$password = "";
+$password = "XqxsodQm9Y0iLJK0";
 # Crear conexión
 $conn = mysqli_connect($servername, $username, $password, $database);
 # Verificar conexión
@@ -11,6 +11,8 @@ if (!$conn) {
 }
 echo "Connected successfully";
 #trabajar archivo con datos
+#revisar
+#JSON?
 $datos = file_get_contents("https://atlas.jifo.co/api/connectors/4a473aa1-701e-4c04-acd2-b425056f5c03");
 $datosv2 = explode ("],[", $datos);
 $comunas = array();
@@ -29,7 +31,6 @@ for ($k = 1; $k < count($comunas); ++$k) {
     $comunas = str_replace('"', '', $comunas);
     $pasos = str_replace('"', '', $pasos);
     $etapa = str_replace('"', '', $etapa);
-    #agregar backslash a posibles comillas simples en nombre de comunas
     $comunas[$k] = addslashes($comunas[$k]);
     $sql = "INSERT INTO pasoapaso VALUES ('$comunas[$k]', '$pasos[$k]', '$etapa[$k]')";
     if (mysqli_query($conn, $sql)) {
